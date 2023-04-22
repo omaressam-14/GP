@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/sign_up.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Sign Up Page</title>
+</head>
+<body>
+    <div class="grid">
+        <div class="grid__left">
+            <div class="left_container">
+                <h1 class="heading">Sign Up</h1>
+                <p class="par">Enter Your Details To Create Account</p>
+                <form class="form" method="POST">
+                    <div class="names_block">
+                        <div class="names_block--l">
+
+                            <label for="fname" class="lbl">First Name</label>
+                            <input name="fname" type="text" class="n_input" required/>
+                        </div>
+                        <div class="names_block--r">
+                            <label for="lname" class="lbl">Last Name</label>
+                            <input name='lname' type="text" class="n_input" required/>
+                        </div>
+                    </div>
+                    <div class="email__in">
+                        <label class="lbl" for="nnemail">Email</label>
+                        <input name="nnemail" class="n_input e_input" type="email" required/>
+                    </div>
+                    <div class="pass_block">
+                        <div class="pass_block-l">
+                            <label class="lbl" for="n_pass">Password</label>
+                            {% if errors['password'] %}
+                                <input type="password" class="n_input error" name="n_pass" required/>
+                                {% if errors['password'] == 1%}
+                                    <p class="error_p">please enter 6 letter or more!</p>
+                                {% endif %}
+                                {% if errors['password'] == 2%}
+                                    <p class="error_p">password and confirm not matching!</p>
+                                {% endif %}
+                            {% endif %}
+
+                            {% if not errors['password'] %}
+                            <input type="password" class="n_input" name="n_pass" required/>
+                            {% endif %}
+                        </div>
+                        <div class="pass_block-r">
+                            <label class="lbl" for="n_pass">Confirm Password</label>
+                            <input type="password" class="n_input" name="c_pass" required/>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit" >Sign UP</button>
+                </form>
+                <p class="bot">Already have account? <a href="/sign_in" class="link">Sign In</a> </p>
+            </div>
+        </div>
+        <div class="grid__right">
+            <img src="static/imgs/brain.svg"  class="brain"/>
+        </div>
+    </div>
+</body>
+</html>
