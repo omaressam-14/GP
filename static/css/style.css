@@ -1,0 +1,178 @@
+* {
+  transition: all 0.3 ease-in-out;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+:root {
+  ---main-color: #ffb703;
+  ---se-color: #282828;
+  ---th-color: #fafafa;
+  ---fr-color: #ffffff;
+}
+body {
+  background: var(---th-color);
+}
+.navbar {
+  background: var(---se-color) !important;
+}
+.navbar ul li a,
+.dropdown a,
+.navbar ul li a:hover {
+  color: var(---fr-color);
+}
+.navbar ul li a.active {
+  color: var(---main-color) !important;
+}
+
+.dropdown ul {
+  background: var(---se-color);
+}
+.dropdown-item:hover {
+  cursor: pointer;
+  background: var(---main-color);
+  color: var(---fr-color);
+}
+.row {
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+.card,
+.btn-Brain {
+  border: 1px solid var(---se-color);
+}
+.btn-Brain {
+  background: var(---main-color);
+}
+.btn-Brain:hover {
+  background: var(---se-color);
+  color: var(---fr-color);
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 24px;
+  margin: 10px 0 15px;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table th,
+table td {
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* Tablet */
+@media only screen and (max-width: 770px) {
+  .row {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: left;
+  }
+  .on-responsive {
+    place-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .row {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: left;
+  }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 24px;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 15px;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+.no_cancer{
+  background-color:#04aa6d;
+  color:white;
+  border-radius:5px;
+  text-align: center;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.cancer{
+  background-color:#c40404;
+  color:white;
+  border-radius:5px;
+  text-align: center;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.p_head{
+  font-size: 32px;
+}
+.p_head3{
+  font-size: 16px;
+  text-align: center;
+}

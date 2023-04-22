@@ -1,0 +1,166 @@
+*{
+    margin : 0 ;
+    padding : 0 ;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+
+html{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    color :#333333;
+}
+body{
+    box-sizing: inherit;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.grid__left{
+    font-size: 32px;
+    padding : 8rem 12rem;
+    height: 100vh;
+    /* display: flex;
+    flex-direction: column; */
+    position: relative;
+}
+
+.left_container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+.heading{
+    font-size: 48px;
+    margin-bottom: 1rem;
+}
+.par{
+    font-size: 18px;
+    margin-bottom: 2.5rem;
+    color: #c9c9c9;
+}
+
+.sigin{
+    display: flex;
+    flex-direction: column;
+    gap : 2rem;
+}
+
+.inp{
+    border-radius: 5px;
+    font-size: 16px;
+    padding : 8px;
+    border: 1px solid rgb(202, 202, 202);
+    transition: outline ease-in 0.25s;
+    /* outline: none; */
+}
+
+.inp::placeholder{
+    opacity: 50%;
+}
+
+.inp:focus{
+    outline-color: #ffb703;
+}
+
+
+
+.submit {
+    font-size: 16px;
+    padding : 8px 16px ;
+    border-radius: 6px;
+    border : none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #fb8500;
+    color: #fff;
+    transition: all , ease-in-out , 0.35s;
+}
+
+.submit:hover{
+    background-color: #ffe138;
+    transform: scale(1.03);
+    color: #333333;
+}
+
+.bot{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 2rem;
+}
+.link:link,.link:visited{
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: 700;
+    color : #fb8500;
+    transition: all ease-in-out 0.25s;
+}
+
+.link:hover{
+    color: #eb4c02
+}
+
+
+.lbl{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.grid__right{
+    background-color: #ffb703;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brain{
+    height: 10%;
+    filter: invert();
+}
+
+
+@media (max-width: 1140px) {
+    .left_container{
+        width: 80%;
+    }
+}
+
+@media (max-width:750px){
+    .grid__right{
+        display: none;
+    }
+    .grid{
+        display: block;
+    }
+
+    .heading,.par{
+        text-align: center;
+    }
+}
+
+@media (max-width:400px){
+    .grid__left{
+        height: 100%;
+    }
+}
+
+
+.error_p{
+    color : #ff2903;
+    font-size: 14px;
+  }
